@@ -1,8 +1,6 @@
 package data;
 
 import com.github.javafaker.Faker;
-import lombok.Value;
-import lombok.val;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -58,7 +56,13 @@ public class DataGenerator {
     private final String name;
     private final String phone;
 
-    public String getCity(){
+     public UserInfo(String city, String name, String phone) {
+         this.city = city;
+         this.name = name;
+         this.phone = phone;
+     }
+
+     public String getCity(){
     return this.city;
     }
     public String getName(){
@@ -74,7 +78,7 @@ public class DataGenerator {
          if (!(o instanceof UserInfo)) return false;
          final UserInfo other = (UserInfo) o;
          final Object this$city = this.getCity();
-         final Object object$city = other.getCity();
+         final Object other$city = other.getCity();
          if (this$city == null ? other$city != null : !this$city.equals(other$city)) return false;
          final Object this$name = this.getName();
          final Object other$name = other.getName();
