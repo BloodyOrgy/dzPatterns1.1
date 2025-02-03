@@ -64,7 +64,7 @@ public class DataGenerator {
     public String getName(){
         return this.name;
     }
-    private String getPhone(){
+    public String getPhone(){
         return this.phone;
     }
 
